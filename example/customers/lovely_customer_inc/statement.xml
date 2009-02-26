@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ubl:Statement
+	xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Statement-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Statement-2 ../../../xsd/maindoc/UBL-Statement-2.0.xsd">
+	<cbc:ID>lovely_customer_inc</cbc:ID>
+	<cbc:UUID>7d9946d0-e686-012b-5b19-0017f22d32c0</cbc:UUID>
+	<cbc:IssueDate>2009-01-01</cbc:IssueDate>
+	<cbc:IssueTime>00:00:00+00:00</cbc:IssueTime>
+	<cbc:Note>foo bar baz</cbc:Note>
+	<cbc:DocumentCurrencyCode>GBP</cbc:DocumentCurrencyCode>
+	<cbc:TotalDebitAmount currencyID="GBP">315.0</cbc:TotalDebitAmount>
+	<cbc:TotalCreditAmount currencyID="GBP">315.0</cbc:TotalCreditAmount>
+	<cbc:TotalBalanceAmount currencyID="GBP">0.0</cbc:TotalBalanceAmount>
+	<cac:StatementPeriod>
+		<cbc:StartDate>2008-01-01</cbc:StartDate>
+		<cbc:EndDate>2009-01-01</cbc:EndDate>
+	</cac:StatementPeriod>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>Unlimited Limited</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>The Sett</cbc:StreetName>
+				<cbc:AdditionalStreetName>5 Badger Lane</cbc:AdditionalStreetName>
+				<cbc:CityName>Badgertown</cbc:CityName>
+				<cbc:PostalZone>Badger999</cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					<cbc:Name>England</cbc:Name>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>123456789</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Mr B. Badger</cbc:Name>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cbc:SupplierAssignedAccountID>lovely_customer_inc</cbc:SupplierAssignedAccountID>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>Lovely Customer Inc.</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>The pasture</cbc:StreetName>
+				<cbc:CityName>Mootown</cbc:CityName>
+				<cbc:PostalZone>MOOO</cbc:PostalZone>
+				<cbc:CountrySubentity>Cow Kingdom</cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					<cbc:Name>Scotland</cbc:Name>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>987654321</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Fred</cbc:Name>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:StatementLine>
+		<cbc:ID>inv-1234</cbc:ID>
+		<cbc:Note>foo</cbc:Note>
+		<cbc:DebitLineAmount currencyID="GBP">315.0</cbc:DebitLineAmount>
+		<cac:DocumentReference>
+			<cbc:ID>1234</cbc:ID>
+			<cac:Attachment>
+				<cac:ExternalReference>
+					<cbc:URI>1234.xml</cbc:URI>
+				</cac:ExternalReference>
+			</cac:Attachment>
+		</cac:DocumentReference>
+	</cac:StatementLine>
+	<cac:StatementLine>
+		<cbc:ID>payment-4321</cbc:ID>
+		<cbc:CreditLineAmount currencyID="GBP">315.0</cbc:CreditLineAmount>
+	</cac:StatementLine>
+</ubl:Statement>
