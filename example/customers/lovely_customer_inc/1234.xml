@@ -83,8 +83,8 @@
 		<cbc:TaxAmount currencyID="GBP">15.0</cbc:TaxAmount>
 	</cac:TaxTotal>
 	<cac:LegalMonetaryTotal>
-		<cbc:TaxExclusiveAmount currencyID="GBP">300.0</cbc:TaxExclusiveAmount>
-		<cbc:PayableAmount currencyID="GBP">315.0</cbc:PayableAmount>
+		<cbc:TaxExclusiveAmount currencyID="GBP">299.99</cbc:TaxExclusiveAmount>
+		<cbc:PayableAmount currencyID="GBP">314.99</cbc:PayableAmount>
 	</cac:LegalMonetaryTotal>
 	<cac:InvoiceLine>
 		<cbc:ID>1</cbc:ID>
