@@ -1,25 +1,16 @@
 package org.oaccounts.docgen
 
-import scala.xml.{Elem, XML, PrettyPrinter, Utility}
+import scala.xml.PrettyPrinter
 
 /**
  * Documentation generator for UBL and XBRL GL schemas.
  */
 object DocGen {
   
-  def elementChildren(xsdDoc: Elem, typeName: String) {
-    for (typeElem <- xsdDoc \\ "complexType") {
-      if (typeElem \ "@name" == typeName) {
-        for (childElem <- typeElem \ "sequence" \ "element") {
-          println(childElem \ "@ref")
-        }
-      }
-    }
-  }
-
-  def main(args: Array[String]) { 
-    val xml = XML.loadFile("os-UBL-2.0/xsd/maindoc/UBL-Invoice-2.0.xsd")
-    elementChildren(xml, "InvoiceType")
+  def main(args: Array[String]) {
+    
+    val el = new Element(None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-Invoice-2.0.xsd"), "", "Invoice")
+    println(new PrettyPrinter(100, 4).format(el.example))
     
     // println(new PrettyPrinter(80, 4).format(xml))
     
