@@ -10,7 +10,8 @@ object DocGen {
   def main(args: Array[String]) {
     
     val el = new Element(None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-Invoice-2.0.xsd"), "", "Invoice")
-    println(new PrettyPrinter(100, 4).format(el.example))
+    //println(new PrettyPrinter(100, 4).format(el.example))
+    el.typeObj.writeAllTypes()
     
     // println(new PrettyPrinter(80, 4).format(xml))
     

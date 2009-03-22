@@ -23,7 +23,10 @@ class Element(parent: Option[Element], nsMapping: Map[String, Elem], defaultPref
     toString()
   
   lazy val typeElem = (xsdDoc \ "complexType").find(elem => elem \ "@name" == typeName).
-    getOrElse(error("Type %s not found".format(typeName)))
+    getOrElse(error("Type %s not found".format(typeName))).
+    asInstanceOf[scala.xml.Elem]
+  
+  lazy val typeObj = new Type(typeElem, this)
   
   lazy val childSequence: ListBuffer[Element] = {
     var list = new ListBuffer[Element]
