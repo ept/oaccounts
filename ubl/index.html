@@ -2,7 +2,40 @@
 layout: ubldoc
 title: Overview
 ---
+
+<h1>Explore UBL</h1>
+
+<p>The Universal Business Language (UBL) is a very comprehensive and complex standard. The documents provide
+a great amount of flexibility and precision in the data they can represent, and the schemas are thus very
+complicated.</p>
+
+<p>These pages are intended as a resource for a newcomer to UBL; they should give you a quick and intuitive
+overview of the structure of a typical UBL document, and allow you to explore the data model without having
+to dig through the details of the schema.</p>
+
+<p>Required elements are shown in deep colour, while optional elements are in a pale colour. Required attributes
+are shown, while optional attributes are hidden (show them by clicking the three dots after the tag name).
+Elements with complex content are collapsed, and you can expand them by clicking the tag name.</p>
+
 <p>UBL documents illustrated here:</p>
 <ul>
 <li><a href="Invoice.html">Invoice</a></li>
+<!--
+<li><a href="CreditNote.html">Credit note</a></li>
+<li><a href="SelfBilledInvoice.html">Self-billed invoice</a></li>
+<li><a href="SelfBilledCreditNote.html">Self-billed credit note</a></li>
+<li><a href="Statement.html">Statement of account</a></li>
+-->
 </ul>
+
+<p>This resource is work in progress. In particular, I hope to do the following before too long:</p>
+<ul>
+<li>Add more types of document, in particular, CreditNote, SelfBilledInvoice, SelfBilledCreditNote and Statement</li>
+<li>Pull human-readable documentation text out of the schemas and display it alongside the structure</li>
+<li>Allow things which have been expanded to be collapsed again</li>
+<li>Clarify the set of values to which certain attributes are restricted, e.g. code lists</li>
+<li>Start defining a subset of UBL for small business use, and include an option in the UBL explorer to
+    show only those elements/attributes which are part of the subset (to make it less overwhelming)</li>
+</ul>
+
+<p>All the documentation is currently extracted from the UBL XSD files via a Scala application.</p>
