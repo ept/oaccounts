@@ -1,0 +1,81 @@
+#container {
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+.el {
+    padding: 0.3em 0;
+}
+
+.required {
+	color: #000000;
+}
+
+.required a {
+	color: #0000ff;
+}
+
+.optional {
+	color: #999999;
+}
+
+.optional a {
+	color: #7777ff;
+}
+
+.ch {
+    margin-left: 2em;
+}
+
+div.tag {
+	margin-left: 4em;
+	text-indent: -4em;
+}
+
+.att.optional {
+	display: none;
+}
+
+span.att.required {
+	display: inline;
+}
+
+.content, .multi .hint {
+	font-family: "Palatino Linotype", Palatino, "URW Palladio L", "Book Antiqua", Baskerville,
+        "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond,
+        "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+.content {
+	font-style: italic;
+	padding: 0 1em;
+}
+
+.multi .hint {
+	font-size: 60%;
+	padding-bottom: 1em;
+}
+
+span.att span.content {
+	padding: 0;
+}
+
+
+#footer {
+	margin-top: 5em;
+}
+
+a:link {
+    text-decoration:none;
+}
+    
+a:visited {
+    text-decoration:none;
+}
+    
+a:hover {
+    text-decoration:underline;
+}   
+    
+a:active {
+    text-decoration:none;
+}
