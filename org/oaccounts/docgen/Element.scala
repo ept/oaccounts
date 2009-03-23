@@ -2,7 +2,7 @@ package org.oaccounts.docgen
 
 import scala.collection.mutable.ListBuffer
 import scala.collection.Map
-import scala.xml.{Elem, Null, TopScope}
+import scala.xml.{Elem, Null, TopScope, PrettyPrinter, NodeSeq, EntityRef, Text, UnprefixedAttribute}
 
 class Element(parent: Option[Element], nsMapping: Map[String, Elem], defaultPrefix: String, refName: String) {
 
@@ -11,7 +11,7 @@ class Element(parent: Option[Element], nsMapping: Map[String, Elem], defaultPref
     (splitName(0), splitName(1))
   } else (defaultPrefix, refName)
   
-  println(path)
+  if (false) println(path) // for debugging
   
   lazy val xsdDoc = nsMapping(nsPrefix)
   
@@ -25,8 +25,6 @@ class Element(parent: Option[Element], nsMapping: Map[String, Elem], defaultPref
   lazy val typeElem = (xsdDoc \ "complexType").find(elem => elem \ "@name" == typeName).
     getOrElse(error("Type %s not found".format(typeName))).
     asInstanceOf[scala.xml.Elem]
-  
-  lazy val typeObj = new Type(typeElem, this)
   
   lazy val childSequence: ListBuffer[Element] = {
     var list = new ListBuffer[Element]
@@ -74,5 +72,73 @@ class Element(parent: Option[Element], nsMapping: Map[String, Elem], defaultPref
       case None => false
     })
   }
+
+  def isSimple: Boolean = childSequence.isEmpty
   
+  def htmlChildren: NodeSeq = childSequence.map(
+    el => try {
+            if (el.isSimple) el.htmlElem else {
+              <div class="elref">
+                <a href={el.localName + ".html"}>&lt;{ el.localName }...&gt;</a>
+              </div>
+            }
+          } catch {
+            case e: RuntimeException => { 
+              println("Warning: %s".format(e))
+              <div class="elref">&lt;{ el.localName }...&gt;</div>
+            }
+          }
+  )
+  
+  def htmlSimpleContent: NodeSeq =
+    <span class="content">{ typeElem \ "simpleContent" \ "extension" \ "@base" }</span>
+  
+  def htmlElem: Elem = {
+    if (isSimple) {
+      <div class="el">
+        <span class="tag">&lt;{ localName }&gt;</span>
+        { htmlSimpleContent }
+        <span class="tag">&lt;/{ localName }&gt;</span>
+      </div>
+    } else {
+      <div class="el">
+        <div class="tag">&lt;{ localName }&gt;</div>
+        { Elem(null, "div", new UnprefixedAttribute("class", "ch", Null), TopScope, htmlChildren:_*) }
+        <div class="tag">&lt;/{ localName }&gt;</div>
+      </div>
+    }
+  }
+  
+  def writeIncludeFile() {
+    val writer = new java.io.FileWriter("doc/_includes/UBL_%s.html".format(localName))
+    writer.write(new PrettyPrinter(100, 4).format(htmlElem))
+    writer.close()
+  }
+  
+  def writeFragmentFile() {
+    val writer = new java.io.FileWriter("doc/ubl/%s_frag.html".format(localName))
+    writer.write("---\nlayout: nil\n---\n")
+    writer.write("{%% include UBL_%s.html %%}".format(localName))
+    writer.close()
+  }
+  
+  def writeFullFile() {
+    val writer = new java.io.FileWriter("doc/ubl/%s.html".format(localName))
+    writer.write("---\nlayout: ubldoc\ntitle: %s\n---\n".format(localName))
+    writer.write("{%% include UBL_%s.html %%}".format(localName))
+    writer.close()
+  }
+  
+  def writeAllFiles() {
+    writeIncludeFile()
+    writeFragmentFile()
+    writeFullFile()
+    for (child <- childSequence) {
+      try {
+        child.writeAllFiles()
+      } catch {
+        case e: RuntimeException => println("Warning: %s".format(e))
+      }
+    }
+  }
 }
