@@ -9,6 +9,14 @@
 .tag {
 }
 
+.content {
+	font-family: "Palatino Linotype", Palatino, "URW Palladio L", "Book Antiqua", Baskerville,
+        "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond,
+        "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+	font-style: italic;
+	padding: 0 1em;
+}
+
 #footer {
 	margin-top: 5em;
 }
