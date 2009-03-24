@@ -9,20 +9,23 @@ object DocGen {
   
   def main(args: Array[String]) {
     
-    val invoice = new Element(None, None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-Invoice-2.0.xsd"), "", "Invoice")
+    (new java.io.File("doc/_includes")).mkdirs
+    (new java.io.File("doc/ubl")).mkdirs
+    
+    val invoice = new Element(None, None, new ScanImports("xsd/maindoc/UBL-Invoice-2.0.xsd"), "", "Invoice")
     invoice.writeAllFiles()
     
     /*
-    val sbInvoice = new Element(None, None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-SelfBilledInvoice-2.0.xsd"), "", "SelfBilledInvoice")
+    val sbInvoice = new Element(None, None, new ScanImports("xsd/maindoc/UBL-SelfBilledInvoice-2.0.xsd"), "", "SelfBilledInvoice")
     sbInvoice.writeAllFiles()
     
-    val creditNote = new Element(None, None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-CreditNote-2.0.xsd"), "", "CreditNote")
+    val creditNote = new Element(None, None, new ScanImports("xsd/maindoc/UBL-CreditNote-2.0.xsd"), "", "CreditNote")
     creditNote.writeAllFiles()
     
-    val sbCreditNote = new Element(None, None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-SelfBilledCreditNote-2.0.xsd"), "", "SelfBilledCreditNote")
+    val sbCreditNote = new Element(None, None, new ScanImports("xsd/maindoc/UBL-SelfBilledCreditNote-2.0.xsd"), "", "SelfBilledCreditNote")
     sbCreditNote.writeAllFiles()
     
-    val statement = new Element(None, None, new ScanImports("os-UBL-2.0/xsd/maindoc/UBL-Statement-2.0.xsd"), "", "Statement")
+    val statement = new Element(None, None, new ScanImports("xsd/maindoc/UBL-Statement-2.0.xsd"), "", "Statement")
     statement.writeAllFiles()
     */
     
