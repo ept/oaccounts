@@ -1,0 +1,108 @@
+<div class="el optional">
+        <div class="tag">&lt;PaymentTerms&gt;</div>
+        <div class="ch"><div class="el optional">
+        <div class="tag">&lt;ID <span class="att optional">
+      schemeID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeDataURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      schemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/ID&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;PaymentMeansID <span class="att optional">
+      schemeID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeDataURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      schemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/PaymentMeansID&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;PrepaidPaymentReferenceID <span class="att optional">
+      schemeID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeDataURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      schemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/PrepaidPaymentReferenceID&gt;</div>
+      </div><div class="multi optional">
+          <div class="el optional">
+        <div class="tag">&lt;Note <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/Note&gt;</div>
+      </div>
+          <div class="hint">Note may occur any number of times.</div>
+        </div><div class="el optional">
+        <div class="tag">&lt;ReferenceEventCode <span class="att optional">
+      listID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      name=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span><span class="att optional">
+      listURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      listSchemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/ReferenceEventCode&gt;</div>
+      </div><div class="el optional">
+        <span class="tag">&lt;SettlementDiscountPercent&gt;</span>
+        <span class="content">xsd:decimal</span>
+        <span class="tag">&lt;/SettlementDiscountPercent&gt;</span>
+      </div><div class="el optional">
+        <span class="tag">&lt;PenaltySurchargePercent&gt;</span>
+        <span class="content">xsd:decimal</span>
+        <span class="tag">&lt;/PenaltySurchargePercent&gt;</span>
+      </div><div class="el optional">
+        <div class="tag">&lt;Amount <span class="att required">
+      currencyID=<span class="content">clm54217:CurrencyCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/Amount&gt;</div>
+      </div><div class="elref optional">
+            <a href="SettlementPeriod.html" class="open">&lt;SettlementPeriod...&gt;</a>
+          </div><div class="elref optional">
+            <a href="PenaltyPeriod.html" class="open">&lt;PenaltyPeriod...&gt;</a>
+          </div></div>
+        <div class="tag">&lt;/PaymentTerms&gt;</div>
+      </div>

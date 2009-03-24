@@ -1,0 +1,150 @@
+<div class="el required">
+        <div class="tag">&lt;InvoiceLine&gt;</div>
+        <div class="ch"><div class="el required">
+        <div class="tag">&lt;ID <span class="att optional">
+      schemeID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeDataURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      schemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/ID&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;UUID <span class="att optional">
+      schemeID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeDataURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      schemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/UUID&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;Note <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/Note&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;InvoicedQuantity <span class="att optional">
+      unitCode=<span class="content">clm66411:UnitCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/InvoicedQuantity&gt;</div>
+      </div><div class="el required">
+        <div class="tag">&lt;LineExtensionAmount <span class="att required">
+      currencyID=<span class="content">clm54217:CurrencyCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/LineExtensionAmount&gt;</div>
+      </div><div class="el optional">
+        <span class="tag">&lt;TaxPointDate&gt;</span>
+        <span class="content">xsd:date</span>
+        <span class="tag">&lt;/TaxPointDate&gt;</span>
+      </div><div class="el optional">
+        <div class="tag">&lt;AccountingCostCode <span class="att optional">
+      listID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      name=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span><span class="att optional">
+      listURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      listSchemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/AccountingCostCode&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;AccountingCost <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/AccountingCost&gt;</div>
+      </div><div class="el optional">
+        <span class="tag">&lt;FreeOfChargeIndicator&gt;</span>
+        <span class="content">xsd:boolean</span>
+        <span class="tag">&lt;/FreeOfChargeIndicator&gt;</span>
+      </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="OrderLineReference.html" class="open">&lt;OrderLineReference...&gt;</a>
+          </div>
+          <div class="hint">OrderLineReference may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="DespatchLineReference.html" class="open">&lt;DespatchLineReference...&gt;</a>
+          </div>
+          <div class="hint">DespatchLineReference may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="ReceiptLineReference.html" class="open">&lt;ReceiptLineReference...&gt;</a>
+          </div>
+          <div class="hint">ReceiptLineReference may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="BillingReference.html" class="open">&lt;BillingReference...&gt;</a>
+          </div>
+          <div class="hint">BillingReference may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="DocumentReference.html" class="open">&lt;DocumentReference...&gt;</a>
+          </div>
+          <div class="hint">DocumentReference may occur any number of times.</div>
+        </div><div class="elref optional">
+            <a href="PricingReference.html" class="open">&lt;PricingReference...&gt;</a>
+          </div><div class="elref optional">
+            <a href="OriginatorParty.html" class="open">&lt;OriginatorParty...&gt;</a>
+          </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="Delivery.html" class="open">&lt;Delivery...&gt;</a>
+          </div>
+          <div class="hint">Delivery may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="PaymentTerms.html" class="open">&lt;PaymentTerms...&gt;</a>
+          </div>
+          <div class="hint">PaymentTerms may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="AllowanceCharge.html" class="open">&lt;AllowanceCharge...&gt;</a>
+          </div>
+          <div class="hint">AllowanceCharge may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="TaxTotal.html" class="open">&lt;TaxTotal...&gt;</a>
+          </div>
+          <div class="hint">TaxTotal may occur any number of times.</div>
+        </div><div class="elref required">
+            <a href="Item.html" class="open">&lt;Item...&gt;</a>
+          </div><div class="elref optional">
+            <a href="Price.html" class="open">&lt;Price...&gt;</a>
+          </div><div class="elref optional">
+            <a href="DeliveryTerms.html" class="open">&lt;DeliveryTerms...&gt;</a>
+          </div></div>
+        <div class="tag">&lt;/InvoiceLine&gt;</div>
+      </div>

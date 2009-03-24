@@ -1,0 +1,70 @@
+<div class="el optional">
+        <div class="tag">&lt;AlternativeConditionPrice&gt;</div>
+        <div class="ch"><div class="el required">
+        <div class="tag">&lt;PriceAmount <span class="att required">
+      currencyID=<span class="content">clm54217:CurrencyCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/PriceAmount&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;BaseQuantity <span class="att optional">
+      unitCode=<span class="content">clm66411:UnitCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/BaseQuantity&gt;</div>
+      </div><div class="multi optional">
+          <div class="el optional">
+        <div class="tag">&lt;PriceChangeReason <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/PriceChangeReason&gt;</div>
+      </div>
+          <div class="hint">PriceChangeReason may occur any number of times.</div>
+        </div><div class="el optional">
+        <div class="tag">&lt;PriceTypeCode <span class="att optional">
+      listID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      name=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span><span class="att optional">
+      listURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      listSchemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/PriceTypeCode&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;PriceType <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/PriceType&gt;</div>
+      </div><div class="el optional">
+        <span class="tag">&lt;OrderableUnitFactorRate&gt;</span>
+        <span class="content">xsd:decimal</span>
+        <span class="tag">&lt;/OrderableUnitFactorRate&gt;</span>
+      </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="ValidityPeriod.html" class="open">&lt;ValidityPeriod...&gt;</a>
+          </div>
+          <div class="hint">ValidityPeriod may occur any number of times.</div>
+        </div><div class="elref optional">
+            <a href="PriceList.html" class="open">&lt;PriceList...&gt;</a>
+          </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="AllowanceCharge.html" class="open">&lt;AllowanceCharge...&gt;</a>
+          </div>
+          <div class="hint">AllowanceCharge may occur any number of times.</div>
+        </div></div>
+        <div class="tag">&lt;/AlternativeConditionPrice&gt;</div>
+      </div>

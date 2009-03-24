@@ -1,0 +1,119 @@
+<div class="el optional">
+        <div class="tag">&lt;AllowanceCharge&gt;</div>
+        <div class="ch"><div class="el optional">
+        <div class="tag">&lt;ID <span class="att optional">
+      schemeID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      schemeVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      schemeDataURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      schemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/ID&gt;</div>
+      </div><div class="el required">
+        <span class="tag">&lt;ChargeIndicator&gt;</span>
+        <span class="content">xsd:boolean</span>
+        <span class="tag">&lt;/ChargeIndicator&gt;</span>
+      </div><div class="el optional">
+        <div class="tag">&lt;AllowanceChargeReasonCode <span class="att optional">
+      listID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      name=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span><span class="att optional">
+      listURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      listSchemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/AllowanceChargeReasonCode&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;AllowanceChargeReason <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/AllowanceChargeReason&gt;</div>
+      </div><div class="el optional">
+        <span class="tag">&lt;MultiplierFactorNumeric&gt;</span>
+        <span class="content">xsd:decimal</span>
+        <span class="tag">&lt;/MultiplierFactorNumeric&gt;</span>
+      </div><div class="el optional">
+        <span class="tag">&lt;PrepaidIndicator&gt;</span>
+        <span class="content">xsd:boolean</span>
+        <span class="tag">&lt;/PrepaidIndicator&gt;</span>
+      </div><div class="el optional">
+        <span class="tag">&lt;SequenceNumeric&gt;</span>
+        <span class="content">xsd:decimal</span>
+        <span class="tag">&lt;/SequenceNumeric&gt;</span>
+      </div><div class="el required">
+        <div class="tag">&lt;Amount <span class="att required">
+      currencyID=<span class="content">clm54217:CurrencyCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/Amount&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;BaseAmount <span class="att required">
+      currencyID=<span class="content">clm54217:CurrencyCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/BaseAmount&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;AccountingCostCode <span class="att optional">
+      listID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      name=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span><span class="att optional">
+      listURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      listSchemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/AccountingCostCode&gt;</div>
+      </div><div class="el optional">
+        <div class="tag">&lt;AccountingCost <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/AccountingCost&gt;</div>
+      </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="TaxCategory.html" class="open">&lt;TaxCategory...&gt;</a>
+          </div>
+          <div class="hint">TaxCategory may occur any number of times.</div>
+        </div><div class="elref optional">
+            <a href="TaxTotal.html" class="open">&lt;TaxTotal...&gt;</a>
+          </div><div class="multi optional">
+          <div class="elref optional">
+            <a href="PaymentMeans.html" class="open">&lt;PaymentMeans...&gt;</a>
+          </div>
+          <div class="hint">PaymentMeans may occur any number of times.</div>
+        </div></div>
+        <div class="tag">&lt;/AllowanceCharge&gt;</div>
+      </div>

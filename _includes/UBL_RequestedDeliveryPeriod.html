@@ -1,0 +1,61 @@
+<div class="el optional">
+        <div class="tag">&lt;RequestedDeliveryPeriod&gt;</div>
+        <div class="ch"><div class="el optional">
+        <span class="tag">&lt;StartDate&gt;</span>
+        <span class="content">xsd:date</span>
+        <span class="tag">&lt;/StartDate&gt;</span>
+      </div><div class="el optional">
+        <span class="tag">&lt;StartTime&gt;</span>
+        <span class="content">xsd:time</span>
+        <span class="tag">&lt;/StartTime&gt;</span>
+      </div><div class="el optional">
+        <span class="tag">&lt;EndDate&gt;</span>
+        <span class="content">xsd:date</span>
+        <span class="tag">&lt;/EndDate&gt;</span>
+      </div><div class="el optional">
+        <span class="tag">&lt;EndTime&gt;</span>
+        <span class="content">xsd:time</span>
+        <span class="tag">&lt;/EndTime&gt;</span>
+      </div><div class="el optional">
+        <div class="tag">&lt;DurationMeasure <span class="att required">
+      unitCode=<span class="content">clm66411:UnitCodeContentType</span>
+    </span>&gt;</div>
+        <span class="content">xsd:decimal</span>
+        <div class="tag">&lt;/DurationMeasure&gt;</div>
+      </div><div class="multi optional">
+          <div class="el optional">
+        <div class="tag">&lt;DescriptionCode <span class="att optional">
+      listID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      listAgencyName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listName=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      listVersionID=<span class="content">xsd:normalizedString</span>
+    </span><span class="att optional">
+      name=<span class="content">xsd:string</span>
+    </span><span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span><span class="att optional">
+      listURI=<span class="content">xsd:anyURI</span>
+    </span><span class="att optional">
+      listSchemeURI=<span class="content">xsd:anyURI</span>
+    </span>&gt;</div>
+        <span class="content">xsd:normalizedString</span>
+        <div class="tag">&lt;/DescriptionCode&gt;</div>
+      </div>
+          <div class="hint">DescriptionCode may occur any number of times.</div>
+        </div><div class="multi optional">
+          <div class="el optional">
+        <div class="tag">&lt;Description <span class="att optional">
+      languageID=<span class="content">xsd:language</span>
+    </span>&gt;</div>
+        <span class="content">xsd:string</span>
+        <div class="tag">&lt;/Description&gt;</div>
+      </div>
+          <div class="hint">Description may occur any number of times.</div>
+        </div></div>
+        <div class="tag">&lt;/RequestedDeliveryPeriod&gt;</div>
+      </div>
