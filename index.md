@@ -80,6 +80,11 @@ News
 * [{{ post.title }}](/oaccounts{{ post.url }}) ({{ post.date | date_to_string }})
 {% endfor %}
 
+Blog posts discussing OAccounts:
+* [Martin Kleppmann, Yes/No/Cancel](http://www.yes-no-cancel.co.uk/2009/03/04/oaccounts-setting-your-accounts-data-free/)
+* [Dennis Howlett, AccMan](http://www.accmanpro.com/2009/03/16/oaccounts-is-it-feasible/)
+* [Ben Kepes, CloudAve](http://www.cloudave.com/link/finding-a-babel-fish-for-data)
+
 [Subscribe to our feed](http://feeds2.feedburner.com/oaccounts) to keep up-to-date
 with OAccounts news!
 
